@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
@@ -13,9 +17,15 @@
 aside {
     height: calc(100vh - 100px);
     flex: 0 0 232px;
+    flex-direction: column;
+    display: flex;
     background-color: black;
     color: lightgrey;
-    
+}
+
+.icon-box {
+    flex: 1;
+    overflow-y: auto;
 }
 
 .icon-box li a {
@@ -37,8 +47,12 @@ aside {
     margin-top: 20px;
 }
 
-.active {
+aside .active {
     border-left: 3px solid green;
+}
+
+.icon-box .active i,
+.icon-box .active span {
     color: white;
 }
 
@@ -72,6 +86,32 @@ aside {
     text-decoration: none;
 }
 
+.bottom-aside {
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+
+.bottom-aside span {
+    padding-left: 8px;
+}
+
+.install {
+    border-bottom: 1px solid white;
+}
+
+.install i {
+    margin-bottom: 8px;
+}
+
+.user {
+    margin-top: 10px;
+}
+
 .cr {
     flex: 1;
     background-color:lightgrey;
@@ -80,6 +120,9 @@ aside {
 }
 
 .top-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
     flex: 0 0 80px;
     background-color: #181512;
 }
@@ -91,7 +134,6 @@ aside {
     border-radius: 20px;
     padding: 8px 20px;
     font-size: 16px;
-
 }
 
 main {
@@ -99,6 +141,53 @@ main {
     /* background-image: linear-gradient(45deg, #13547a 0%, #80d0c7 100%); */
     background-image: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
 }
+
+/***************************/
+/******* TOP MAIN **********/
+.top-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+
+.top-main ul {    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    margin-left: -25px;
+    margin-right: -25px;
+}
+
+.top-main li {
+    margin: 25px;
+}
+
+.top-main a {
+    display: block;
+    color: #BFB5B5;
+    text-decoration: none;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.top-main .active a::before {
+    content: "";
+    width: 25px;
+    height: 3px;
+    background: purple;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.top-main a:hover {
+    color: white;
+}
+
 
 .player {
     width: 100vw;
