@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.clearfix {
+    content: '';
+    display: table;
+    clear: both
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -14,13 +20,44 @@ body {
     display: flex;
 }
 
+/******** LOGO ********/
+#logo {
+    display: flex;
+    align-items: center;
+}
+
+#logo a {
+    font-size: 45px;
+    color: white;
+}
+
+#logo img {
+    width: 70%;
+    margin-bottom: 20px;
+    color: white;
+    display: none;
+}
+
 aside {
     height: calc(100vh - 100px);
-    flex: 0 0 232px;
+    flex: 0 0 40px;
     flex-direction: column;
     display: flex;
     background-color: black;
     color: lightgrey;
+}
+
+/******* LEFT NAV *******/
+aside .left-nav span {
+    display: none;
+}
+
+aside .left-nav li {
+    border-left: 3px solid transparent;
+}
+
+aside .left-nav li.active {
+    border-color: green;
 }
 
 .icon-box {
@@ -33,6 +70,7 @@ aside {
     opacity: 0.7;
     padding-left: 25px;
     list-style: none;
+    text-decoration: none;
 }
 .icon-box ul li {
     margin-bottom: 15px;
@@ -41,32 +79,20 @@ aside {
     margin-left: 10px;
 }
 
-.icon-box, .logo {
+.icon-box, #logo {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
 }
 
-aside .active {
-    border-left: 3px solid green;
-}
 
 .icon-box .active i,
 .icon-box .active span {
     color: white;
 }
 
-.logo {
-    padding-left: 25px;
-}
-
-.logo img {
-    width: 70%;
-    margin-bottom: 20px;
-    color: white;
-}
-
 .playlist {
+    display: none;
     font-size: 12px;
 }
 .playlist h4 {
@@ -98,18 +124,22 @@ aside .active {
 
 .bottom-aside span {
     padding-left: 8px;
-}
-
-.install {
-    border-bottom: 1px solid white;
+    display: none;
 }
 
 .install i {
     margin-bottom: 8px;
+    font-size: 15px;
 }
 
 .user {
     margin-top: 10px;
+    font-size: 20px;
+}
+
+aside li a:hover {
+    color: white;
+    cursor: pointer;
 }
 
 .cr {
@@ -125,6 +155,7 @@ aside .active {
     align-items: center;
     flex: 0 0 80px;
     background-color: #181512;
+    padding: 15px;
 }
 
 .top-bar button {
@@ -134,12 +165,19 @@ aside .active {
     border-radius: 20px;
     padding: 8px 20px;
     font-size: 16px;
+    transition: transform 300ms;
+}
+
+.top-bar button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
 }
 
 main {
     flex: 1;
-    /* background-image: linear-gradient(45deg, #13547a 0%, #80d0c7 100%); */
-    background-image: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+    overflow-y: auto;
+    /* background-image: linear-gradient(45deg, #667eea 0%, #764ba2 100%); */
+    background-image: linear-gradient(to right, #434343 0%, black 100%);
 }
 
 /***************************/
@@ -186,6 +224,69 @@ main {
 
 .top-main a:hover {
     color: white;
+}
+
+/* Main tracks */
+.played, .may-like {
+    color: white;
+    margin: 10px;
+}
+
+.img-responsive {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.tracks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.track {
+    padding: 10px;
+    flex: 0 0 50%;
+}
+
+.track-img img {
+    width: 100%;
+    height: 200px;
+    
+}
+
+.track-img {
+    position: relative;
+    
+}
+
+.overlay {
+    display: none;
+}
+
+.track-img:hover .overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s ease;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: whitesmoke;
+}
+
+.track-txt {
+    margin-top: 8px;
+    text-align: center;
+    color: #BFB5B5;
 }
 
 

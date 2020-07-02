@@ -1,0 +1,57 @@
+/* Il mobile è gestito in style.css */
+/* @media (max-width: 767px) {} */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+    aside {
+        flex: 0 0 232px;
+    }
+
+    #logo img {
+        display: block;
+    }
+
+    #logo a {
+        display: none;
+    }
+
+    aside .left-nav span {
+        display: inline;
+    }
+    
+    .playlist {
+        display: block;
+    }
+
+    .track {
+        flex: 0 0 50%;
+    }
+
+    .bottom-aside span {
+        display: inline;
+    }
+
+    .install {
+        border-bottom: 1px solid white;
+    }
+
+    .user {
+        font-size: 15px
+    }
+
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .track {
+        flex: 0 0 25%;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .track {
+        flex: 0 0 16.66%;
+    }
+}
