@@ -246,7 +246,7 @@ main {
 
 .track {
     padding: 10px;
-    flex: 0 0 220px;
+    flex: 0 0 230px;
     /* flex: 0 0 50%; */
 }
 
@@ -356,7 +356,6 @@ main {
 .player-center .icons i {
     padding-left: 8px;
     padding-right: 8px;
-    padding-bottom: 15px;
 }
 
 .progressive-bar {
@@ -365,6 +364,7 @@ main {
     height: 4px;
     border-radius: 4px;
     background-color: grey;
+    position: relative;
 }
 
 .my-progress {
@@ -373,6 +373,18 @@ main {
     height: 4px;
     border-radius: 4px;
     background-color: white;
+    position: absolute;
+    left: 0;
+}
+
+.timing {
+    width: 100%;
+    text-align: center;
+}
+
+.timing span {
+    padding: 4px;
+    font-size: 14px;
 }
 
 .player-right {
@@ -396,4 +408,15 @@ main {
     height: 4px;
     border-radius: 4px;
     background-color: grey;
+    position: relative;
+}
+
+.my-progress-1 {
+    display: inline-block;
+    width: 30%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+    position: absolute;
+    left: 0;
 }
