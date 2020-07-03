@@ -25,7 +25,8 @@
     }
 
     .track {
-        flex: 0 0 50%;
+        flex: 0 0 220px;
+        /* flex: 0 0 50%; */
     }
 
     .bottom-aside span {
@@ -45,13 +46,15 @@
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .track {
-        flex: 0 0 25%;
+        flex: 0 0 180px;
+        /* flex: 0 0 25%; */
     }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .track {
-        flex: 0 0 16.66%;
+        flex. 0 0 1450px;
+        /* flex: 0 0 16.66%; */
     }
 }

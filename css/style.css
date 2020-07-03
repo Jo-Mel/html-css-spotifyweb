@@ -20,6 +20,15 @@ body {
     display: flex;
 }
 
+aside {
+    height: calc(100vh - 100px);
+    flex: 0 0 40px;
+    flex-direction: column;
+    display: flex;
+    background-color: black;
+    color: lightgrey;
+}
+
 /******** LOGO ********/
 #logo {
     display: flex;
@@ -38,14 +47,6 @@ body {
     display: none;
 }
 
-aside {
-    height: calc(100vh - 100px);
-    flex: 0 0 40px;
-    flex-direction: column;
-    display: flex;
-    background-color: black;
-    color: lightgrey;
-}
 
 /******* LEFT NAV *******/
 aside .left-nav span {
@@ -84,7 +85,6 @@ aside .left-nav li.active {
     flex-direction: column;
     margin-top: 20px;
 }
-
 
 .icon-box .active i,
 .icon-box .active span {
@@ -246,7 +246,8 @@ main {
 
 .track {
     padding: 10px;
-    flex: 0 0 50%;
+    flex: 0 0 220px;
+    /* flex: 0 0 50%; */
 }
 
 .track-img img {
@@ -289,6 +290,9 @@ main {
     color: #BFB5B5;
 }
 
+.may-like {
+    padding-bottom: 80px;
+}
 
 .player {
     width: 100vw;
@@ -297,4 +301,99 @@ main {
     left: 0;
     bottom: 0;
     background-color:#191616;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #BFB5B5;
+
+}
+
+.player-left {
+    display: flex;
+    flex: 1 1;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding-left: 25px;
+    color: #BFB5B5;
+    opacity: 0.8;
+}
+
+.now-playing-img img {
+    width: 60px;
+}
+
+.now-playing-txt {
+    padding-left: 15px;
+}
+
+.now-playing-icon-heart {
+    padding-left: 35px;
+}
+
+.now-playing-icon-folder {
+    padding-left: 15px;
+}
+
+.player-center {
+    display: flex;
+    flex: 4 4;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #BFB5B5;
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+.player-center .icons {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.player-center .icons i {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 15px;
+}
+
+.progressive-bar {
+    display: inline-block;
+    width: 50%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: grey;
+}
+
+.my-progress {
+    display: inline-block;
+    width: 30%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.player-right {
+    display: flex;
+    flex: 1 1;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: #BFB5B5;
+    opacity: 0.8;
+}
+
+.options i,
+.now-playing-icon-progressive {
+    margin-right: 10px;
+}
+
+.now-playing-icon-progressive {
+    display: inline-block;
+    width: 50%;
+    height: 4px;
+    border-radius: 4px;
+    background-color: grey;
 }
